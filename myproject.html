@@ -6,7 +6,6 @@
 
   <title>My Projects</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -21,6 +20,12 @@
       font-family:'Poppins',sans-serif;
       background:#fff8fb;
       color:#444;
+
+      background-image:
+      linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+
+      background-size:40px 40px;
     }
 
     a{
@@ -33,30 +38,41 @@
     nav{
       width:100%;
       padding:20px 8%;
+
       display:flex;
       justify-content:space-between;
       align-items:center;
-      background:white;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+
+      background:rgba(255,255,255,0.8);
+      backdrop-filter:blur(10px);
+
+      position:sticky;
+      top:0;
     }
 
     .logo{
-      font-size:1.3rem;
-      font-weight:600;
-      color:#ff79a8;
+      font-size:1.5rem;
+      font-weight:700;
+      color:#ff69a6;
     }
 
     .back-btn{
-      padding:10px 22px;
-      border-radius:40px;
-      background:#ffb6cf;
+
+      padding:12px 26px;
+
+      background:linear-gradient(135deg,#ff69b4,#ff1493);
+
       color:white;
-      transition:0.3s;
+
+      border-radius:50px;
+
+      transition:0.35s ease;
+
+      font-weight:600;
     }
 
     .back-btn:hover{
-      transform:translateY(-4px);
-      background:#ff79a8;
+      transform:translateY(-6px);
     }
 
     /* SECTION */
@@ -67,37 +83,47 @@
 
     .section-title{
       text-align:center;
-      font-size:2.5rem;
-      color:#ff79a8;
-      margin-bottom:60px;
+      font-size:3rem;
+      color:#ff69a6;
+      margin-bottom:70px;
     }
 
-    /* PROJECT CARDS */
+    /* CARDS */
 
     .projects-container{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(300px,1fr));
+
       gap:35px;
     }
 
     .project-card{
+
       background:white;
-      border-radius:28px;
+
+      border-radius:30px;
+
       overflow:hidden;
+
       box-shadow:0 10px 25px rgba(0,0,0,0.05);
+
       transition:0.4s ease;
+
       cursor:pointer;
     }
 
-    /* ลูกเล่นเด้ง */
+    /* HOVER EFFECT */
 
     .project-card:hover{
+
       transform:
-      translateY(-15px)
+      translateY(-18px)
       scale(1.04);
 
       box-shadow:
-      0 20px 40px rgba(255,121,168,0.3);
+      0 20px 40px rgba(255,20,147,0.3);
     }
 
     .project-card img{
@@ -111,22 +137,20 @@
     }
 
     .project-content h3{
-      color:#ff79a8;
+      color:#ff1493;
       margin-bottom:12px;
-      font-size:1.4rem;
+      font-size:1.5rem;
     }
 
     .project-content p{
       color:#666;
-      line-height:1.7;
+      line-height:1.8;
     }
-
-    /* FOOTER */
 
     footer{
       text-align:center;
       padding:25px;
-      background:#ffeaf2;
+      background:#ffe7f0;
       color:#777;
       margin-top:60px;
     }
@@ -134,12 +158,13 @@
     @media(max-width:768px){
 
       .section-title{
-        font-size:2rem;
+        font-size:2.2rem;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
@@ -176,11 +201,13 @@
 
         <div class="project-content">
 
-          <h3>MC คณะ</h3>
+          <h3>
+            MC คณะ
+          </h3>
 
           <p>
             ประสบการณ์การเป็นพิธีกรในกิจกรรมของคณะ
-            ช่วยพัฒนาทักษะด้านการสื่อสาร
+            ช่วยพัฒนาทักษะการสื่อสาร
             ความมั่นใจ และการทำงานร่วมกับผู้อื่น
           </p>
 
@@ -196,12 +223,14 @@
 
         <div class="project-content">
 
-          <h3>ประกวดพูดภาษาอังกฤษ</h3>
+          <h3>
+            ประกวดพูดภาษาอังกฤษ
+          </h3>
 
           <p>
             การแข่งขันพูดภาษาอังกฤษที่ช่วยพัฒนาทักษะ
-            การใช้ภาษา การนำเสนอ
-            และการคิดอย่างเป็นระบบ
+            การนำเสนอ และการใช้ภาษาอังกฤษ
+            ในสถานการณ์จริง
           </p>
 
         </div>
@@ -216,12 +245,14 @@
 
         <div class="project-content">
 
-          <h3>ประกวดตัดต่อคลิป</h3>
+          <h3>
+            ประกวดตัดต่อคลิป
+          </h3>
 
           <p>
-            ผลงานด้านการตัดต่อวิดีโอ
-            การเล่าเรื่องผ่านสื่อ
-            และการสร้างคอนเทนต์เชิงสร้างสรรค์
+            การสร้างสรรค์วิดีโอและการตัดต่อคลิป
+            เพื่อเล่าเรื่องและถ่ายทอดเนื้อหา
+            อย่างสร้างสรรค์
           </p>
 
         </div>
