@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | ปฏิพัทธ์ สายรัดเงิน</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#fff8fb;
+      color:#444;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* NAVBAR */
+    nav{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.03);
+    }
+
+    .logo{
+      font-size:1.2rem;
+      font-weight:600;
+      color:#ff79a8;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#ff79a8;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:80px 8%;
+      gap:50px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-text h1{
+      font-size:3.5rem;
+      color:#ff79a8;
+      margin-bottom:10px;
+    }
+
+    .hero-text h2{
+      font-size:1.4rem;
+      font-weight:400;
+      color:#777;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      max-width:550px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      background:#ffb6cf;
+      color:white;
+      border-radius:50px;
+      font-weight:500;
+      transition:0.3s;
+      box-shadow:0 6px 20px rgba(255,182,207,0.4);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      background:#ff79a8;
+    }
+
+    .hero-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      min-width:300px;
+    }
+
+    .hero-image img{
+      width:350px;
+      height:350px;
+      object-fit:cover;
+      border-radius:50%;
+      border:10px solid #ffe3ee;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    /* SECTION */
+    section{
+      padding:100px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.3rem;
+      color:#ff79a8;
+      margin-bottom:60px;
+    }
+
+    /* ABOUT */
+    .about{
+      background:white;
+      border-radius:30px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.04);
+    }
+
+    .about p{
+      margin-bottom:20px;
+      font-size:1rem;
+      color:#555;
+    }
+
+    /* PROJECTS */
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+      transition:0.35s ease;
+      cursor:pointer;
+    }
+
+    .project-card:hover{
+      transform:translateY(-15px) scale(1.03);
+      box-shadow:0 15px 35px rgba(255,121,168,0.25);
+    }
+
+    .project-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:25px;
+    }
+
+    .project-content h3{
+      color:#ff79a8;
+      margin-bottom:10px;
+    }
+
+    .project-content p{
+      font-size:0.95rem;
+      color:#666;
+    }
+
+    /* SKILLS */
+    .skills-container{
+      max-width:800px;
+      margin:auto;
+    }
+
+    .skill{
+      margin-bottom:25px;
+    }
+
+    .skill-name{
+      margin-bottom:8px;
+      font-weight:500;
+    }
+
+    .skill-bar{
+      width:100%;
+      height:14px;
+      background:#ffe4ef;
+      border-radius:30px;
+      overflow:hidden;
+    }
+
+    .skill-fill{
+      height:100%;
+      border-radius:30px;
+      background:linear-gradient(90deg,#ffb6cf,#ff79a8);
+    }
+
+    /* CONTACT */
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:10px 0;
+      font-size:1.05rem;
+    }
+
+    .contact a{
+      color:#ff79a8;
+      font-weight:500;
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#ffeaf2;
+      color:#777;
+      margin-top:60px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:2.5rem;
+      }
+
+      .hero-image img{
+        width:260px;
+        height:260px;
+      }
+
+      .nav-links{
+        gap:15px;
+        font-size:0.9rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Portfolio</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>6650101702 <br>ปฏิพัทธ์ สายรัดเงิน</h1>
+
+      <h2>Logistics And Transportation</h2>
+
+      <p>
+        นักศึกษาคณะการจัดการโลจิสติกส์ ชั้นปีที่ 3 
+        ที่มีความสนใจด้านการขนส่ง การจัดการระบบโลจิสติกส์ 
+        และการพัฒนาทักษะการสื่อสารควบคู่กับความคิดสร้างสรรค์
+      </p>
+
+      <a href="#projects" class="btn">View My Projects</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="Profile.png" alt="Profile">
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="about">
+      <h2 class="section-title">About Me</h2>
+
+      <p>
+        ผมเป็นนักศึกษาคณะการจัดการโลจิสติกส์ที่มีความสนใจในด้านการบริหารจัดการขนส่ง 
+        การวางแผนโลจิสติกส์ และการพัฒนาระบบการทำงานให้มีประสิทธิภาพมากยิ่งขึ้น 
+        พร้อมทั้งมีความตั้งใจในการเรียนรู้เทคโนโลยีและทักษะใหม่ ๆ อยู่เสมอ
+      </p>
+
+      <p>
+        นอกจากความรู้ด้านโลจิสติกส์ ผมยังมีความสามารถด้านการสื่อสาร 
+        การทำงานเป็นทีม และการนำเสนอ ซึ่งช่วยให้สามารถทำงานร่วมกับผู้อื่นได้อย่างมีประสิทธิภาพ 
+        รวมถึงสามารถถ่ายทอดไอเดียและแนวคิดออกมาได้อย่างชัดเจน
+      </p>
+
+      <p>
+        ผมเชื่อว่าการพัฒนาตัวเองอย่างต่อเนื่องจะช่วยเปิดโอกาสใหม่ ๆ 
+        ทั้งในด้านการศึกษา การทำงาน และการสร้างประสบการณ์ที่มีคุณค่าในอนาคต
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-container">
+
+      <!-- PROJECT 1 -->
+      <a href="mc.html" class="project-card">
+
+        <img src="Mc.png" alt="MC Project">
+
+        <div class="project-content">
+          <h3>MC คณะ</h3>
+
+          <p>
+            ประสบการณ์การเป็นพิธีกรในกิจกรรมของคณะ 
+            ช่วยพัฒนาทักษะการพูด การสื่อสาร 
+            และการสร้างความมั่นใจในการนำเสนอ
+          </p>
+        </div>
+
+      </a>
+
+      <!-- PROJECT 2 -->
+      <a href="english.html" class="project-card">
+
+        <img src="stand.jpg" alt="English Contest">
+
+        <div class="project-content">
+          <h3>ประกวดพูดภาษาอังกฤษ</h3>
+
+          <p>
+            การเข้าร่วมการแข่งขันพูดภาษาอังกฤษ 
+            เพื่อพัฒนาทักษะการสื่อสาร 
+            การใช้ภาษา และความกล้าแสดงออก
+          </p>
+        </div>
+
+      </a>
+
+      <!-- PROJECT 3 -->
+      <a href="video.html" class="project-card">
+
+        <img src="video editer.png" alt="Video Editing">
+
+        <div class="project-content">
+          <h3>ประกวดตัดต่อคลิป</h3>
+
+          <p>
+            ผลงานด้านการตัดต่อวิดีโอและการสร้างสรรค์สื่อ 
+            เพื่อถ่ายทอดเนื้อหาให้น่าสนใจและมีความเป็นมืออาชีพ
+          </p>
+        </div>
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill">
+        <div class="skill-name">Communication</div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width:90%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Logistics Management</div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width:85%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Presentation</div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width:88%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Teamwork</div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width:92%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Video Editing</div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width:80%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">English Speaking</div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width:84%;"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p>Email : youremail@example.com</p>
+
+    <p>
+      Instagram :
+      <a href="https://instagram.com/" target="_blank">
+        @yourinstagram
+      </a>
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 ปฏิพัทธ์ สายรัดเงิน | Personal Portfolio
+  </footer>
+
+</body>
+</html>
