@@ -7,7 +7,32 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+/* PROJECT BUTTON PAGE LINK */
 
+.project-button-section{
+  text-align:center;
+}
+
+.project-btn-container{
+  margin-top:30px;
+}
+
+.main-project-btn{
+  display:inline-block;
+  padding:18px 45px;
+  background:linear-gradient(135deg,#ffb6cf,#ff8fb6);
+  color:white;
+  border-radius:60px;
+  font-size:1.1rem;
+  font-weight:600;
+  transition:0.35s ease;
+  box-shadow:0 10px 25px rgba(255,121,168,0.25);
+}
+
+.main-project-btn:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 18px 35px rgba(255,121,168,0.4);
+}
   <style>
     *{
       margin:0;
@@ -337,119 +362,18 @@
 
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
+  <!-- MY PROJECT BUTTON -->
+<section id="projects" class="project-button-section">
 
-    <h2 class="section-title">My Projects</h2>
+  <h2 class="section-title">My Projects</h2>
 
-    <div class="projects-container">
+  <div class="project-btn-container">
+    <a href="myproject.html" class="main-project-btn">
+      View My Projects
+    </a>
+  </div>
 
-      <!-- PROJECT 1 -->
-      <a href="mc.html" class="project-card">
-
-        <img src="Mc.png" alt="MC Project">
-
-        <div class="project-content">
-          <h3>MC คณะ</h3>
-
-          <p>
-            ประสบการณ์การเป็นพิธีกรในกิจกรรมของคณะ 
-            ช่วยพัฒนาทักษะการพูด การสื่อสาร 
-            และการสร้างความมั่นใจในการนำเสนอ
-          </p>
-        </div>
-
-      </a>
-
-      <!-- PROJECT 2 -->
-      <a href="english.html" class="project-card">
-
-        <img src="stand.jpg" alt="English Contest">
-
-        <div class="project-content">
-          <h3>ประกวดพูดภาษาอังกฤษ</h3>
-
-          <p>
-            การเข้าร่วมการแข่งขันพูดภาษาอังกฤษ 
-            เพื่อพัฒนาทักษะการสื่อสาร 
-            การใช้ภาษา และความกล้าแสดงออก
-          </p>
-        </div>
-
-      </a>
-
-      <!-- PROJECT 3 -->
-      <a href="video.html" class="project-card">
-
-        <img src="video editer.png" alt="Video Editing">
-
-        <div class="project-content">
-          <h3>ประกวดตัดต่อคลิป</h3>
-
-          <p>
-            ผลงานด้านการตัดต่อวิดีโอและการสร้างสรรค์สื่อ 
-            เพื่อถ่ายทอดเนื้อหาให้น่าสนใจและมีความเป็นมืออาชีพ
-          </p>
-        </div>
-
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-
-    <h2 class="section-title">Skills</h2>
-
-    <div class="skills-container">
-
-      <div class="skill">
-        <div class="skill-name">Communication</div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width:90%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-name">Logistics Management</div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width:85%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-name">Presentation</div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width:88%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-name">Teamwork</div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width:92%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-name">Video Editing</div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width:80%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-name">English Speaking</div>
-        <div class="skill-bar">
-          <div class="skill-fill" style="width:84%;"></div>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
+</section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
