@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Projects</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#fff8fb;
+      color:#444;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:1.3rem;
+      font-weight:600;
+      color:#ff79a8;
+    }
+
+    .back-btn{
+      padding:10px 22px;
+      border-radius:40px;
+      background:#ffb6cf;
+      color:white;
+      transition:0.3s;
+    }
+
+    .back-btn:hover{
+      transform:translateY(-4px);
+      background:#ff79a8;
+    }
+
+    /* SECTION */
+
+    .projects-section{
+      padding:100px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.5rem;
+      color:#ff79a8;
+      margin-bottom:60px;
+    }
+
+    /* PROJECT CARDS */
+
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:35px;
+    }
+
+    .project-card{
+      background:white;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+      transition:0.4s ease;
+      cursor:pointer;
+    }
+
+    /* ลูกเล่นเด้ง */
+
+    .project-card:hover{
+      transform:
+      translateY(-15px)
+      scale(1.04);
+
+      box-shadow:
+      0 20px 40px rgba(255,121,168,0.3);
+    }
+
+    .project-card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:28px;
+    }
+
+    .project-content h3{
+      color:#ff79a8;
+      margin-bottom:12px;
+      font-size:1.4rem;
+    }
+
+    .project-content p{
+      color:#666;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#ffeaf2;
+      color:#777;
+      margin-top:60px;
+    }
+
+    @media(max-width:768px){
+
+      .section-title{
+        font-size:2rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+      My Projects
+    </div>
+
+    <a href="index.html" class="back-btn">
+      Back Home
+    </a>
+
+  </nav>
+
+  <!-- PROJECTS -->
+
+  <section class="projects-section">
+
+    <h1 class="section-title">
+      My Experiences
+    </h1>
+
+    <div class="projects-container">
+
+      <!-- PROJECT 1 -->
+
+      <div class="project-card">
+
+        <img src="Mc.png" alt="MC">
+
+        <div class="project-content">
+
+          <h3>MC คณะ</h3>
+
+          <p>
+            ประสบการณ์การเป็นพิธีกรในกิจกรรมของคณะ
+            ช่วยพัฒนาทักษะด้านการสื่อสาร
+            ความมั่นใจ และการทำงานร่วมกับผู้อื่น
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 2 -->
+
+      <div class="project-card">
+
+        <img src="stand.jpg" alt="English Contest">
+
+        <div class="project-content">
+
+          <h3>ประกวดพูดภาษาอังกฤษ</h3>
+
+          <p>
+            การแข่งขันพูดภาษาอังกฤษที่ช่วยพัฒนาทักษะ
+            การใช้ภาษา การนำเสนอ
+            และการคิดอย่างเป็นระบบ
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 3 -->
+
+      <div class="project-card">
+
+        <img src="video editer.png" alt="Video Editing">
+
+        <div class="project-content">
+
+          <h3>ประกวดตัดต่อคลิป</h3>
+
+          <p>
+            ผลงานด้านการตัดต่อวิดีโอ
+            การเล่าเรื่องผ่านสื่อ
+            และการสร้างคอนเทนต์เชิงสร้างสรรค์
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 ปฏิพัทธ์ สายรัดเงิน
+  </footer>
+
+</body>
+</html>
